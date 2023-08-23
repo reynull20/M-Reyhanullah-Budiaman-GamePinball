@@ -12,6 +12,7 @@ public class SwitchController : MonoBehaviour
     private SwitchState state;
     public ScoreManager scoreManager;
     private AudioSource audioSource;
+    public VFXManager vFXManager;
 
     [SerializeField]
     [Tooltip("Point to be added to final score when passed")]
@@ -99,5 +100,6 @@ public class SwitchController : MonoBehaviour
         
         // scoreManager.AddScore(point);
         audioSource.Play();
+        vFXManager.PlaySwitchVFX(transform.position);
     }
 }
